@@ -1,0 +1,46 @@
+package lista2q1;
+import java.util.Scanner;
+
+public class Dia {
+	Scanner ler = new Scanner(System.in);
+	private int dia;//dia do mes
+	private int limite;//maximo de dia no mes
+	
+	public Dia(int mes, boolean anoB){
+		setDia();//define o dia
+		limiteDia(mes,anoB);//define a quantidade de dias 
+	}
+	public int setDia(){
+		System.out.println("insira um valor para o dia:");
+		dia=ler.nextInt();
+		return dia;
+	}
+	public int getDia(){
+		return dia;
+	}
+	public int incrementDia(){
+		dia=(dia%limite)+1;
+		return dia;
+	}
+	public int limiteDia(int mes, boolean anoB){
+		if(mes==2){
+			if(anoB==true){
+				limite=29;
+			}
+			else{
+				limite=28;
+			}
+		}
+		else {
+			if(mes%2==0){
+				limite=30;
+			}
+			else{
+				limite=31;
+			}
+		}
+		return limite;
+	}
+	
+	
+}
