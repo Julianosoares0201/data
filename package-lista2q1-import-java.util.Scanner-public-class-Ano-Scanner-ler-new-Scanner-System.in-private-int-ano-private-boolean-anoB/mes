@@ -1,0 +1,24 @@
+package lista2q1;
+import java.util.Scanner;
+
+public class Mes {
+	Scanner ler = new Scanner(System.in);
+	private int mes;
+	
+	public Mes(){
+		setMes();
+	}
+	
+	public int setMes(){
+		System.out.println("Insira um valor para o mes:");
+		mes=ler.nextInt();
+		return mes;
+	}
+	public int getMes(){
+		return mes;
+	}
+	public int incrementMes(){
+		mes=(mes%12)+1;
+		return mes;
+	}
+}
