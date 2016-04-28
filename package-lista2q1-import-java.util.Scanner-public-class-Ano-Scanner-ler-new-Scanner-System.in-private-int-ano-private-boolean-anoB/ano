@@ -1,0 +1,31 @@
+package lista2q1;
+import java.util.Scanner;
+
+public class Ano {
+	Scanner ler = new Scanner(System.in);
+	private int ano;
+	private boolean anoB;//ano bissexto
+	
+	public Ano(){
+		getAno();
+		verificaAnoB();
+	}
+	
+	public int setAno(){
+		System.out.println("Insira um valor para o ano:");
+		ano=ler.nextInt();
+		return ano;
+	}
+	public int getAno(){
+		return ano;
+	}
+	public boolean verificaAnoB(){
+		if((ano%4==0)&&(ano%100!=0)||(ano%400==0)){
+			anoB=true;
+		}
+		else{
+			anoB=false;
+		}
+		return anoB;
+	}
+}
