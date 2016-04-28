@@ -1,0 +1,23 @@
+package lista2q1;
+
+public class Data {
+	public Ano ano;
+	public Mes mes;
+	public Dia dia;
+	public String visor;
+	
+	public Data(){
+		ano = new Ano();
+		mes = new Mes();
+		dia = new Dia(mes.getMes(),ano.verificaAnoB());
+		visor=dia+"////"+mes+"////"+ano;
+	}
+	
+	public String setData(){
+		int d,m,a;
+		System.out.println("dia:");
+		
+		System.out.println("mes:");
+		System.out.println("ano:");
+	}
+}
